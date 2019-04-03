@@ -229,7 +229,7 @@ public class Main {
       es = (int) graph.getEdgeSource(e);
       et = (int) graph.getEdgeTarget(e);
       downSum = C[es - 1][et - 1] - A[es - 1][et - 1];
-      if (downSum == 0) {
+      if (downSum == 0 || downSum < 0) {
         return 0;
       }
       sum += A[es - 1][et - 1] / downSum;
